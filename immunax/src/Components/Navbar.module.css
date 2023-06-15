@@ -1,15 +1,24 @@
 .navbar{
-    background-color: #ffffff69;
+    background-color: #ffffffbf;
     padding: 20px 10px;
     font-size: 20px;
     color: #222121;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    z-index: 9999
+}
+.menubar{
+    width: 50%;
+    display: flex;
+    justify-content: space-around; 
 }
 .logo{
     width: 200px;
 }
+
 
 @media screen and (min-device-width: 320px) and (max-device-width: 480px) { 
     /* STYLES HERE */
@@ -17,3 +26,6 @@
         display: none;
     }
 }
+
+/* hero-section */
+
