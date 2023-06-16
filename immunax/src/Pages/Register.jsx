@@ -1,90 +1,128 @@
+import { Input,Container, Button,} from '@chakra-ui/react';
+import { useState } from 'react';
 import {
-    Flex,
-    Box,
     FormControl,
     FormLabel,
-    Input,
-    InputGroup,
-    HStack,
-    InputRightElement,
-    Stack,
-    Button,
-    Heading,
-    Text,
-    useColorModeValue,
-    Link,
-  } from '@chakra-ui/react';
-  import { useState } from 'react';
-  import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-  
+
+  } from '@chakra-ui/react'
+
+
+
+
+
   export default function Register() {
-    const [showPassword, setShowPassword] = useState(false);
+
+const [inputVal,setinputval]=useState({
+  email: "", 
+  password: "",
+  name:""
+})
+
+let {email,password,name}=inputVal
+
+const handlechange=(e)=>{
+  const {name,value}=e.target
+  setinputval({...inputVal,
+  [name]:value
+  })
+}
+
+
+console.log(inputVal);
+
+
+
+
+
+const submitt=(inputVal)=>{
+  fetch(`http://localhost:8080/user`)
+  .then((res)=>{
+    return  res.json()
+  })
+  .then((data)=>{
+    let found=false
+    data.forEach((el) => {
+      if (el.email == inputVal.email) {
+          found = true
+      }
+  })
+
+  if (found) {
+      alert("Email already exist")
+  } else {
+      register(inputVal)
+      alert("Registered Successfully")
+      
+  }
+  })
+
+
+
+  function register(inputVal){
+    fetch(`http://localhost:8080/user`,{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify(inputVal
+      )
+    })
+    }
+  }
+
+
+const submitData=(e)=>{
+  e.preventDefault()
+  submitt(inputVal)
   
-    return (
-      <Flex
-     
-        minH={'100vh'}
-        align={'center'}
-        justify={'center'}
-        bg={useColorModeValue('gray.50', 'gray.800')}>
-        <Stack spacing={8} mx={'auto'} width='40%' py={12} px={6}>
-          <Stack align={'center'}>
-            <Heading fontSize={'4xl'} textAlign={'center'}>
-              Sign up
-            </Heading>
-           
-          </Stack>
-          <Box
-            rounded={'lg'}
-            bg={useColorModeValue('white', 'gray.700')}
-            boxShadow={'lg'}
-            p={8}>
-            <Stack spacing={4}>
-             
-                  <FormControl id="firstName" isRequired>
-                    <FormLabel>Full Name</FormLabel>
-                    <Input type="text" />
-                  </FormControl>
-             
-              <FormControl id="email" isRequired>
-                <FormLabel>Email address</FormLabel>
-                <Input type="email" />
-              </FormControl>
-              <FormControl id="password" isRequired>
-                <FormLabel>Password</FormLabel>
-                <InputGroup>
-                  <Input type={showPassword ? 'text' : 'password'} />
-                  <InputRightElement h={'full'}>
-                    <Button
-                      variant={'ghost'}
-                      onClick={() =>
-                        setShowPassword((showPassword) => !showPassword)
-                      }>
-                      {showPassword ? <ViewIcon /> : <ViewOffIcon />}
-                    </Button>
-                  </InputRightElement>
-                </InputGroup>
-              </FormControl>
-              <Stack spacing={10} pt={2}>
-                <Button
-                  loadingText="Submitting"
-                  size="lg"
-                  bg={'blue.400'}
-                  color={'white'}
-                  _hover={{
-                    bg: 'blue.500',
-                  }}>
-                  Sign up
-                </Button>
-              </Stack>
-              <Stack pt={6}>
-                <Text align={'center'}>
-                  Already a user? <Link color={'blue.400'}>Login</Link>
-                </Text>
-              </Stack>
-            </Stack>
-          </Box>
-        </Stack>
-      </Flex>
+
+ 
+  setinputval({
+    email: "", 
+    password: "",
+    name:""
+  })
+  e.target.reset();
+
+  
+}
+
+
+  return (
+
+   <>
+
+   <Container width="100%" p={10}>
+   <form action="" width="50%" onSubmit={submitData}>
+      <FormControl isRequired>
+        <FormLabel>Full Name</FormLabel>
+        <Input placeholder='First name' name="name" value={name} onChange={handlechange} />
+      </FormControl>
+
+      <FormControl isRequired>
+        <FormLabel> Email</FormLabel>
+        <Input placeholder='Enter Your Email' name="email" type='email' onChange={handlechange}/>
+      </FormControl>
+
+      <FormControl isRequired>
+        <FormLabel>Password</FormLabel>
+        <Input placeholder='Enter Your Password' name="password" type='password' onChange={handlechange}/>
+      </FormControl>
+
+      <Button
+            mt={4}
+            colorScheme='teal'
+           type='submit'
+          >
+            Submit
+          </Button>
+
+   </form>
+
+   </Container>
+  
+   </>
+
+
     );
   }
