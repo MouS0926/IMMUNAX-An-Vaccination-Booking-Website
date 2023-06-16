@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar'
 import Whyshould from '../Components/CompHome/Whyshould'
 import Preparation from '../Components/CompHome/Preparation'
 import Emergency from '../Components/CompHome/Emergency'
+import Footer from '../Components/CompHome/Footer'
 
 
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Whyshould/>
       <Preparation/>
       <Emergency/>
+      <Footer/>
     </div>
   )
 }

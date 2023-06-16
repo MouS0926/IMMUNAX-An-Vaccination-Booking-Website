@@ -1,5 +1,10 @@
 import React from 'react'
-import { Box, Center, Container,Grid, GridItem, HStack, Heading, Text } from '@chakra-ui/layout'
+import { Box, Center, Container,Grid, GridItem, HStack, Heading, Spacer, Text } from '@chakra-ui/layout'
+import { Card, CardBody } from '@chakra-ui/card'
+import { BsFillCameraVideoFill, BsFillChatDotsFill, BsFillTelephoneFill } from 'react-icons/bs'
+import { MdEmail } from 'react-icons/md'
+import maledoctor from "../../image/male1.png"
+
 
 export default function Emergency() {
   return (
@@ -25,12 +30,98 @@ templateRows={{ base: 'repeat(1, 1fr)', sm: 'repeat(1, 1fr)', md: 'repeat(3, 1fr
  </GridItem>
 
 
-    <GridItem colSpan={1} rowSpan={3} bg="#000">
+    <GridItem colSpan={1} rowSpan={3} >
+
+            <img src={maledoctor} alt="male-doctor" s />
      </GridItem>
 
-     <GridItem rowSpan={2} colSpan={1} bg="red">
-        
-    </GridItem>
+<GridItem rowSpan={2} colSpan={1}>
+
+    <Grid templateColumns='repeat(2, 1fr)' gap={6}>
+            <GridItem w='100%'>
+                <Card>
+                <CardBody>
+
+                    <HStack spacing='24px'>
+                         <Center w='40px' h='40px' bg='#f1f5ff' fontSize='20px' color='#2d4dcb'>
+                              <BsFillTelephoneFill  />
+                         </Center>
+                         <Text color='#1f3e72'fontWeight="bold" fontSize='xl'>Call</Text>
+                         
+                    </HStack>
+                    <br/>
+                    <Center w='100%' h='30px' bg='#f1f5ff' fontSize='15px' color='#2d4dcb' p={6}>
+                        <Text color="#2d4dcb">Call Now</Text>
+                    </Center>
+                </CardBody>
+                </Card>
+            </GridItem>
+
+            <GridItem w='100%'>
+                <Card>
+                <CardBody>
+
+                    <HStack spacing='24px'>
+                         <Center w='40px' h='40px' bg='#f1f5ff' fontSize='20px' color='#2d4dcb'>
+                              <BsFillChatDotsFill  />
+                         </Center>
+                         <Text color='#1f3e72'fontWeight="bold" fontSize='xl'>Chat</Text>
+                         
+                    </HStack>
+                    <br/>
+                    <Center w='100%' h='30px' bg='#f1f5ff' fontSize='15px' color='#2d4dcb' p={6}>
+                        <Text color="#2d4dcb">Chat Now</Text>
+                    </Center>
+                </CardBody>
+                </Card>
+            </GridItem>
+  
+    </Grid>
+
+
+    <Grid templateColumns='repeat(2, 1fr)' gap={6}>
+            <GridItem w='100%'>
+                <Card>
+                <CardBody>
+
+                    <HStack spacing='24px'>
+                         <Center w='40px' h='40px' bg='#f1f5ff' fontSize='20px' color='#2d4dcb'>
+                              <BsFillCameraVideoFill  />
+                         </Center>
+                         <Text color='#1f3e72'fontWeight="bold" fontSize='xl'>Video Call</Text>
+                         
+                    </HStack>
+                    <br/>
+                    <Center w='100%' h='30px' bg='#f1f5ff' fontSize='15px' color='#2d4dcb' p={6}>
+                        <Text color="#2d4dcb">Video Call Now</Text>
+                    </Center>
+                </CardBody>
+                </Card>
+            </GridItem>
+
+            <GridItem w='100%'>
+                <Card>
+                <CardBody>
+
+                    <HStack spacing='24px'>
+                         <Center w='40px' h='40px' bg='#f1f5ff' fontSize='20px' color='#2d4dcb'>
+                              <MdEmail  />
+                         </Center>
+                         <Text color='#1f3e72'fontWeight="bold" fontSize='xl'>Message</Text>
+                         
+                    </HStack>
+                    <br/>
+                    <Center w='100%' h='30px' bg='#f1f5ff' fontSize='15px' color='#2d4dcb' p={6}>
+                        <Text color="#2d4dcb">Message Now</Text>
+                    </Center>
+                </CardBody>
+                </Card>
+            </GridItem>
+  
+    </Grid>
+
+
+</GridItem>
        
         </Grid>
 

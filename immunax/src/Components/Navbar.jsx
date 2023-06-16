@@ -26,6 +26,7 @@ export default function Navbar() {
                 <Link to="/" >Home</Link>
                 <Link to="/database" >Database</Link>
                 <Link to="/about" >About</Link>
+                <Link to="/register" >Register</Link>
           
 </Box>
 
@@ -90,6 +91,7 @@ export default function Navbar() {
               <Link to="/" >Home</Link>
                 <Link to="/database" >Database</Link>
                 <Link to="/about" >About</Link>
+                <Link to="/register">Register</Link>
 
           
     </VStack>
