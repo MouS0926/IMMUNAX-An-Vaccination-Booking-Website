@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import style from "./Navbar.module.css"
 import logo from "../logo/immunax-logo-transparent.png"
@@ -6,11 +6,14 @@ import { Stack, HStack, VStack,Box, position, Container } from '@chakra-ui/react
 
 import { IconButton } from '@chakra-ui/react'
  import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
+import { AuthContext } from '../Context/Authcontext'
 
 
 
 export default function Navbar() {
  const [menudisplay, setMenudiplay] = useState("none")
+ const { authState,loginUser}=useContext(AuthContext)
+
 
   return (
     <div>
@@ -26,7 +29,16 @@ export default function Navbar() {
                 <Link to="/" >Home</Link>
                 <Link to="/database" >Database</Link>
                 <Link to="/about" >About</Link>
-                <Link to="/register" >Register</Link>
+                <Link to="/register" >
+                  {
+                    authState.isAuth?
+                    authState.username
+                    :
+                    "Register"
+                  }
+                  
+                  
+                  </Link>
           
 </Box>
 
