@@ -1,49 +1,64 @@
 {
-    "admin": [
-        { 
-            "id": 1, 
-            "emial": "admin@mail.com", 
-            "password": "admin",
-            "username":"admin"
-        }
-    ],
-    "user": [
-        {
-            "id": 1, 
-            "emial": "moumita@mail.com", 
-            "password": "1234",
-            "name":"moumita Sarkar"
-        },
-        {
-            "id": 2, 
-            "emial": "riya@mail.com", 
-            "password": "4321",
-            "name":"riya sen"
-        }
-    ],
-    "booking": [
-        { 
-            "id":1,
-            "name": "ani sen",
-            "age":23,
-            "date":"12-05-2023",
-            "gender":"Female",
-            "location":"Kolkata",
-            "vaccine_type":"Covaxine",
-            "status":"pending"
-        },
-        { 
-            "id":2,
-            "name": "Ritu",
-            "age":45,
-            "date":"12-05-2023",
-            "gender":"Female",
-            "location":"Delhi",
-            "vaccine_type":"Covaxine",
-            "status":"pending"
-        }
-    ]
-    
-  }
-
-
+  "admin": [
+    {
+      "id": 1,
+      "email": "admin@mail.com",
+      "password": "admin",
+      "username": "admin"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "email": "moumita@mail.com",
+      "password": "1234",
+      "name": "moumita Sarkar"
+    },
+    {
+      "id": 2,
+      "email": "riya@mail.com",
+      "password": "4321",
+      "name": "riya sen"
+    },
+    {
+      "email": "moupriya2609@gmail.com",
+      "password": "12345",
+      "name": "MOUMITA SARKAR",
+      "id": 3
+    },
+    {
+      "email": "",
+      "password": "wrqrq",
+      "name": "Anindita",
+      "id": 4
+    },
+    {
+      "email": "m@mail.com",
+      "password": "treeeee",
+      "name": "MOUMITA SARKAR",
+      "id": 5
+    }
+  ],
+  "booking": [
+    {
+      "id": 1,
+      "name": "ani sen",
+      "age": 23,
+      "date": "12-05-2023",
+      "gender": "Female",
+      "location": "Kolkata",
+      "vaccine_type": "Covaxine",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "name": "Ritu",
+      "age": 45,
+      "date": "12-05-2023",
+      "gender": "Female",
+      "location": "Delhi",
+      "vaccine_type": "Covaxine",
+      "status": "pending"
+    }
+  ]
+}
