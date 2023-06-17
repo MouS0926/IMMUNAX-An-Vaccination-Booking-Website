@@ -8,11 +8,13 @@ export default function Hero() {
   return (
     <>
     <Fragment>
+
+        <Container maxW="100%">
     <Box>
         <Grid templateColumns='repeat(2, 1fr)'>
         <GridItem w='100%'>
 
-            <Container>
+           
                 <Stack className={style.textBox}>
                      <Text fontSize={{ base: '3xl', sm: '3xl', md: '5xl' }} as='b' color="#1f3e72">Fight Virus </Text>
                     <Text fontSize={{ base: '3xl', sm: '3xl', md: '5xl' }} as='b' color="#1f3e72"> With Vaccine</Text>
@@ -31,7 +33,7 @@ export default function Hero() {
                     </HStack>
                 </Stack>
              
-           </Container>
+        
               
            
             </GridItem>
@@ -43,8 +45,7 @@ export default function Hero() {
         </Grid>
       
 
-        <Container maxW='90%'> 
-            <Box bg='white'className={style.bookform}>
+        <Box bg='white'className={style.bookform} width="70%">
                 <form>
                     <HStack>
                         <FormControl>
@@ -70,9 +71,12 @@ export default function Hero() {
 
 
                         <Button
-                        mt={4}
-                        colorScheme='teal'
+                        mt={5}
+                        bg="#2b4bc9"
+                        color="#fff"
                         type='submit'
+                        p={2}
+                        width="10%"
                         >
                         Submit
                     </Button>
@@ -82,14 +86,11 @@ export default function Hero() {
                    
                 </form>
             </Box>
-           
-
-        </Container>
 
 
 
         </Box>
-     
+        </Container>
     </Fragment>
     
 
