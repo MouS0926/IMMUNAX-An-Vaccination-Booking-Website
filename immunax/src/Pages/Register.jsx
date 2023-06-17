@@ -1,10 +1,11 @@
-import { Input,Container, Button,} from '@chakra-ui/react';
+import { Input,Container, Button, Divider,} from '@chakra-ui/react';
 import { useState } from 'react';
 import {
     FormControl,
     FormLabel,
 
   } from '@chakra-ui/react'
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 
 
@@ -31,7 +32,7 @@ const handlechange=(e)=>{
 console.log(inputVal);
 
 
-
+const navigate = useNavigate();
 
 
 const submitt=(inputVal)=>{
@@ -52,7 +53,7 @@ const submitt=(inputVal)=>{
   } else {
       register(inputVal)
       alert("Registered Successfully")
-      
+      navigate("/login");
   }
   })
 
@@ -83,7 +84,8 @@ const submitData=(e)=>{
     name:""
   })
   e.target.reset();
-
+ 
+ 
   
 }
 
@@ -116,7 +118,9 @@ const submitData=(e)=>{
           >
             Submit
           </Button>
-
+          <br/><br/>
+          <Divider orientation='horizontal' />
+        Already Signed up? <Link to="/login">Login</Link>
    </form>
 
    </Container>

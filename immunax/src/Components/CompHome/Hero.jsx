@@ -1,7 +1,7 @@
 import { Box, Container, HStack, Stack } from '@chakra-ui/layout'
 import React, { Fragment } from 'react'
 import banner from '../../image/hero-1.jpg'
-import { Grid, GridItem,Image,Text,Center   } from '@chakra-ui/react'
+import { Grid, GridItem,Image,Text,Center, FormControl, FormLabel, Input, Select, Button   } from '@chakra-ui/react'
 import style from "../CompHome/Home.module.css"
 import { CheckCircleIcon, StarIcon } from '@chakra-ui/icons'
 export default function Hero() {
@@ -42,6 +42,52 @@ export default function Hero() {
 
         </Grid>
       
+
+        <Container maxW='90%'> 
+            <Box bg='white'className={style.bookform}>
+                <form>
+                    <HStack>
+                        <FormControl>
+                        <FormLabel>Email address</FormLabel>
+                        <Input type='email' />
+
+                        </FormControl>
+
+                        <FormControl>
+                        <FormLabel>Email address</FormLabel>
+                        <Input type='email' />
+
+                        </FormControl>
+
+                        <FormControl>
+                            <FormLabel>Email address</FormLabel>
+                            <Select placeholder='Select option'>
+                                <option value='option1'>Option 1</option>
+                                <option value='option2'>Option 2</option>
+                                <option value='option3'>Option 3</option>
+                            </Select>
+                        </FormControl>
+
+
+                        <Button
+                        mt={4}
+                        colorScheme='teal'
+                        type='submit'
+                        >
+                        Submit
+                    </Button>
+
+                    
+                    </HStack>
+                   
+                </form>
+            </Box>
+           
+
+        </Container>
+
+
+
         </Box>
      
     </Fragment>

@@ -19,25 +19,8 @@
       "email": "riya@mail.com",
       "password": "4321",
       "name": "riya sen"
-    },
-    {
-      "email": "moupriya2609@gmail.com",
-      "password": "12345",
-      "name": "MOUMITA SARKAR",
-      "id": 3
-    },
-    {
-      "email": "",
-      "password": "wrqrq",
-      "name": "Anindita",
-      "id": 4
-    },
-    {
-      "email": "m@mail.com",
-      "password": "treeeee",
-      "name": "MOUMITA SARKAR",
-      "id": 5
     }
+  
   ],
   "booking": [
     {
