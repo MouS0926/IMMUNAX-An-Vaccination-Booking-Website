@@ -57,7 +57,7 @@ export default function Navbar() {
                     :
                     <Link to="/login">Login</Link>
                   }
-              
+              <Link to="/adminlogin">Admin Login</Link>
           
 </Box>
 
@@ -160,7 +160,7 @@ export default function Navbar() {
                     :
                     <Link to="/login">Login</Link>
                   }
-
+            <Link to="/adminlogin" >Admin Login</Link>
           
     </VStack>
 

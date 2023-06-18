@@ -15,7 +15,7 @@ export default function Booked() {
 
     const fetchBookedData=(useremail)=>{
         setLoading(true)
-        fetch(`http://localhost:8080/booking?useremail=${useremail}`)
+        fetch(`https://immunax-api.onrender.com/booking?useremail=${useremail}`)
         .then((res)=>{
             return res.json()
         })
@@ -34,7 +34,7 @@ export default function Booked() {
 if(loading){
    return <div>
 
-<div style={{paddingTop:"100px",margin:"auto" ,width:"100%"}}>
+<div style={{paddingTop:"100px",margin:"auto", width:"50"}}>
 <Spinner
   thickness='4px'
   speed='0.65s'

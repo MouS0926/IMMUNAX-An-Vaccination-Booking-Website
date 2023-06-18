@@ -34,7 +34,7 @@ export default function Adminalldata() {
   const totaldata=()=>{
    
 
-    fetch(`http://localhost:8080/booking`)
+    fetch(`https://immunax-api.onrender.com/booking`)
     .then((res)=>{
       return res.json()
     })
@@ -51,7 +51,7 @@ export default function Adminalldata() {
   const fetchbookdata=()=>{
     setLoading(true)
 
-    fetch(`http://localhost:8080/booking?_limit=3&_page=${page}`)
+    fetch(`https://immunax-api.onrender.com/booking?_limit=3&_page=${page}`)
     .then((res)=>{
       return res.json()
     })
@@ -72,7 +72,7 @@ export default function Adminalldata() {
 
   let handleToggle=(newObj,id)=>{
 
-    fetch(`http://localhost:8080/booking/${id}`,{
+    fetch(`https://immunax-api.onrender.com/booking/${id}`,{
        method:"PUT",
        headers:{
          "Content-type":"application/json"

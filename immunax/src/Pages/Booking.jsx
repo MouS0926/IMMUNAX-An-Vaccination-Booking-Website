@@ -36,7 +36,7 @@ const handlechange=(e)=>{
 const handleSubmit=(e)=>{
   e.preventDefault()
 
-  fetch(`http://localhost:8080/booking`,{
+  fetch(`https://immunax-api.onrender.com/booking`,{
     method:"POST",
     headers:{
       "Content-Type":"application/json"
@@ -75,7 +75,7 @@ const {name,age,date,gender,location,vaccine_type,status}=formstate
 
 
                 <Heading as='h4' size='md' align="center" color='#3252d0' p={3}>
-                 Book Your Vaccination
+                 Book Your Slot
               </Heading>
                 <Divider/>
 

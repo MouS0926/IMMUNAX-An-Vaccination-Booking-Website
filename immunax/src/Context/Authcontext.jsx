@@ -10,7 +10,7 @@ export default function AuthcontextProvider({ children }) {
       });
 
       const handlelogin=(email,password)=>{
-        fetch(`http://localhost:8080/user`)
+        fetch(`https://immunax-api.onrender.com/user`)
         .then((res)=>{
           return res.json()
         })

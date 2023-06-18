@@ -20,7 +20,7 @@ export default function Footer() {
 
             <GridItem w='100%'>
                 <Stack align={'flex-start'}>
-                    <Heading as='h4' size='md' color='#1f3e72'>Product</Heading>
+                    <Heading as='h4' size='md' color='#1f3e72'>About</Heading>
                     <Link href={'#'}>About Us</Link>
                     <Link href={'#'}>Features</Link>
                     <Link href={'#'}>News & Blogs</Link>
@@ -30,7 +30,7 @@ export default function Footer() {
 
             <GridItem w='100%'>
             <Stack align={'flex-start'}>
-                    <Heading as='h4' size='md' color='#1f3e72'>Product</Heading>
+                    <Heading as='h4' size='md' color='#1f3e72'>Support</Heading>
                     <Link href={'#'}>About Us</Link>
                     <Link href={'#'}>Features</Link>
                     <Link href={'#'}>News & Blogs</Link>
@@ -38,7 +38,7 @@ export default function Footer() {
             </GridItem>
             <GridItem w='100%'>
             <Stack align={'flex-start'}>
-                    <Heading as='h4' size='md' color='#1f3e72'>Product</Heading>
+                    <Heading as='h4' size='md' color='#1f3e72'>Company</Heading>
                     <Link href={'#'}>About Us</Link>
                     <Link href={'#'}>Features</Link>
                     <Link href={'#'}>News & Blogs</Link>
@@ -62,7 +62,7 @@ export default function Footer() {
           spacing={4}
           justify={{ md: 'space-between' }}
           align={{ md: 'center' }}>
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Text>© 2023 Immunax. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
            
           </Stack>

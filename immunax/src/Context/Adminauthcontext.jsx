@@ -11,7 +11,7 @@ export default function Adminauthcontext({ children }) {
 
 
       const handlelogin=(email,password)=>{
-        fetch(`http://localhost:8080/admin`)
+        fetch(`https://immunax-api.onrender.com/admin`)
         .then((res)=>{
           return res.json()
         })

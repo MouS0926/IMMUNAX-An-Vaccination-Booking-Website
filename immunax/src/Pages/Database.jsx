@@ -15,7 +15,7 @@ export default function Database() {
 
   const fetchData=()=>{
    
-    fetch(`http://localhost:8080/booking`)
+    fetch(`https://immunax-api.onrender.com/booking`)
     .then((res)=>{
         return res.json()
     })
@@ -32,7 +32,7 @@ useEffect(()=>{
 
 const vacinatedData=(status)=>{
    
-  fetch(`http://localhost:8080/booking?status=true`)
+  fetch(`https://immunax-api.onrender.com/booking?status=true`)
   .then((res)=>{
       return res.json()
   })
