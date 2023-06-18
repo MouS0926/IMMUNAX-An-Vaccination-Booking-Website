@@ -1,4 +1,4 @@
-import { Input,Container, Button, Divider,} from '@chakra-ui/react';
+import { Input,Container, Button, Divider, Box, Heading,} from '@chakra-ui/react';
 import { useState } from 'react';
 import {
     FormControl,
@@ -6,8 +6,7 @@ import {
 
   } from '@chakra-ui/react'
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-
-
+import style from './Register.module.css'
 
 
 
@@ -95,7 +94,14 @@ const submitData=(e)=>{
    <>
 
    <Container width="100%" p={10}>
-   <form action="" width="50%" onSubmit={submitData}>
+    <Box className={style.registForm}>
+
+    <Heading as='h4' size='md' align="center">
+     Register Here
+    </Heading>
+
+
+    <form action=""  onSubmit={submitData}>
       <FormControl isRequired>
         <FormLabel>Full Name</FormLabel>
         <Input placeholder='First name' name="name" value={name} onChange={handlechange} />
@@ -115,6 +121,7 @@ const submitData=(e)=>{
             mt={4}
             colorScheme='teal'
            type='submit'
+           width="100%"
           >
             Submit
           </Button>
@@ -122,6 +129,8 @@ const submitData=(e)=>{
           <Divider orientation='horizontal' />
         Already Signed up? <Link to="/login">Login</Link>
    </form>
+
+    </Box>
 
    </Container>
   

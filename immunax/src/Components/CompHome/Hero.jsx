@@ -1,19 +1,24 @@
 import { Box, Container, HStack, Stack } from '@chakra-ui/layout'
+import { Flex, Spacer,Heading } from '@chakra-ui/react'
 import React, { Fragment } from 'react'
 import banner from '../../image/hero-1.jpg'
 import { Grid, GridItem,Image,Text,Center, FormControl, FormLabel, Input, Select, Button   } from '@chakra-ui/react'
 import style from "../CompHome/Home.module.css"
 import { CheckCircleIcon, StarIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
+
+
+
 export default function Hero() {
   return (
     <>
     <Fragment>
 
-        <Container maxW="100%">
+     
     <Box>
-        <Grid templateColumns='repeat(2, 1fr)'>
+        <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)' }}>
         <GridItem w='100%'>
-
+        <Container >
            
                 <Stack className={style.textBox}>
                      <Text fontSize={{ base: '3xl', sm: '3xl', md: '5xl' }} as='b' color="#1f3e72">Fight Virus </Text>
@@ -33,56 +38,35 @@ export default function Hero() {
                     </HStack>
                 </Stack>
              
-        
+        </Container>
               
            
             </GridItem>
-
-                <GridItem w='100%'>
-                    <Image src={banner} alt='hero image' boxSize='100%' h="700px" objectFit="cover"/>
+            {/* display={{ base: 'none', sm: 'block', md: 'block' }} */}
+                <GridItem w='100%' display={{ base: 'none', sm: 'block', md: 'block' }}>
+                    <Image src={banner} alt='hero image' boxSize='100%' h="700px" objectFit="cover" />
                 </GridItem>
 
         </Grid>
       
 
-        <Box bg='white'className={style.bookform} width="70%">
+        <Box bg='white'className={style.bookform}>
                 <form>
-                    <HStack>
-                        <FormControl>
-                        <FormLabel>Email address</FormLabel>
-                        <Input type='email' />
-
-                        </FormControl>
-
-                        <FormControl>
-                        <FormLabel>Email address</FormLabel>
-                        <Input type='email' />
-
-                        </FormControl>
-
-                        <FormControl>
-                            <FormLabel>Email address</FormLabel>
-                            <Select placeholder='Select option'>
-                                <option value='option1'>Option 1</option>
-                                <option value='option2'>Option 2</option>
-                                <option value='option3'>Option 3</option>
-                            </Select>
-                        </FormControl>
-
-
-                        <Button
-                        mt={5}
-                        bg="#2b4bc9"
-                        color="#fff"
-                        type='submit'
-                        p={2}
-                        width="10%"
-                        >
-                        Submit
+                    <Flex direction={{ base: 'row', sm: 'row', md: 'row' }} gap={2}>
+                        
+                        <p>
+                            Schedule Your Vaccination Day
+                        </p>
+                        
+                      <Button bg="#2b4bc9" color="#fff">
+                            <Link to="/booking">
+                            Book
+                            </Link>
+                      
                     </Button>
 
                     
-                    </HStack>
+                    </Flex>
                    
                 </form>
             </Box>
@@ -90,7 +74,7 @@ export default function Hero() {
 
 
         </Box>
-        </Container>
+      
     </Fragment>
     
 

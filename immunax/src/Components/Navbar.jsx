@@ -2,10 +2,10 @@ import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import style from "./Navbar.module.css"
 import logo from "../logo/immunax-logo-transparent.png"
-import { Stack, HStack, VStack,Box, position, Container, Flex } from '@chakra-ui/react'
+import { Stack, HStack, VStack,Box, position, Container, Flex, MenuButton, MenuList, MenuItem, Menu, Button } from '@chakra-ui/react'
 
 import { IconButton } from '@chakra-ui/react'
- import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
+ import { ChevronDownIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { AuthContext } from '../Context/Authcontext'
 import { FaUserCircle } from "react-icons/fa";
 
@@ -28,11 +28,23 @@ export default function Navbar() {
           <Box className={style.menubar} >
                 <Link to="/" >Home</Link>
                 <Link to="/database" >Database</Link>
-                <Link to="/about" >About</Link>
+              
                
                   {
                     authState.isAuth?
-                    <p><Flex><FaUserCircle />  {authState.username}</Flex></p>
+                    <>
+                    {/* <p><Flex><FaUserCircle />  {authState.username}</Flex></p> */}
+                    <Menu>
+                    <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                    <Flex><FaUserCircle />&nbsp;  {authState.username}</Flex>
+                    </MenuButton>
+                    <MenuList>
+                      <MenuItem>
+                      <Link to="/booked">Booking Details </Link>
+                      </MenuItem>
+                    </MenuList>
+                  </Menu>
+                  </>
                     :
                     <Link to="/register" >
                        Register
@@ -51,14 +63,17 @@ export default function Navbar() {
 
 </Container>
 
-
-  <Box 
+<Container maxW="100%" className={style.mobileNav}>
+<HStack  bg='white'>
+<img src={logo} alt="" className={style.mobilelogo}/>
+<Box 
     pos="absolute" 
     zIndex={50} 
     right="0" 
+    
     top="0" 
-    w='100%'
-    bg='white'
+   
+   
     display={{sm:{menudisplay},  md: 'none', lg: "none",xl:"none" }}
   >
 
@@ -82,10 +97,17 @@ export default function Navbar() {
       icon={<CloseIcon />}
       onClick={()=>setMenudiplay("none")} />
     }
-   
+    
 
 </Box>
-  <Box display={menudisplay} >
+
+
+
+</HStack>
+</Container>
+
+
+  <Box display={menudisplay}>
 
 
  
@@ -101,6 +123,7 @@ export default function Navbar() {
       h="auto"
       boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"
       p="4"
+      className={style.mobilelist}
       > 
 
 
@@ -109,8 +132,34 @@ export default function Navbar() {
 
               <Link to="/" >Home</Link>
                 <Link to="/database" >Database</Link>
-                <Link to="/about" >About</Link>
-                <Link to="/register">Register</Link>
+               
+                {
+                    authState.isAuth?
+                    <>
+                    {/* <p><Flex><FaUserCircle />  {authState.username}</Flex></p> */}
+                    <Menu>
+                    <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                    <Flex><FaUserCircle />&nbsp;  {authState.username}</Flex>
+                    </MenuButton>
+                    <MenuList>
+                      <MenuItem>
+                      <Link to="/booked">Booking Details </Link>
+                      </MenuItem>
+                    </MenuList>
+                  </Menu>
+                  </>
+                    :
+                    <Link to="/register" >
+                       Register
+                    </Link>
+                  }
+
+{
+                    authState.isAuth?
+                    <p onClick={logoutUser}>Logout</p>
+                    :
+                    <Link to="/login">Login</Link>
+                  }
 
           
     </VStack>

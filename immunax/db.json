@@ -19,29 +19,47 @@
       "email": "riya@mail.com",
       "password": "4321",
       "name": "riya sen"
+    },
+    {
+      "email": "ad@mail.com",
+      "password": "321",
+      "name": "Amit Das",
+      "id": 3
     }
-  
   ],
   "booking": [
     {
       "id": 1,
       "name": "ani sen",
       "age": 23,
-      "date": "12-05-2023",
       "gender": "Female",
+      "useremail": "nhj@mail.com",
       "location": "Kolkata",
+      "date": "12-05-2023",
       "vaccine_type": "Covaxine",
-      "status": "pending"
+      "status": false
     },
     {
-      "id": 2,
-      "name": "Ritu",
-      "age": 45,
-      "date": "12-05-2023",
+      "name": "MOUMITA SARKAR",
+      "age": "23",
+      "date": "2023-06-23",
       "gender": "Female",
-      "location": "Delhi",
-      "vaccine_type": "Covaxine",
-      "status": "pending"
+      "location": "Kolkata",
+      "vaccine_type": "Nuvaxovid",
+      "status": false,
+      "useremail": "moumita@mail.com",
+      "id": 2
+    },
+    {
+      "id": 4,
+      "name": "Anindita",
+      "age": "15",
+      "gender": "",
+      "useremail": "moumita@mail.com",
+      "location": "Kolkata",
+      "date": "2023-06-23",
+      "vaccine_type": "Nuvaxovid",
+      "status": true
     }
   ]
 }

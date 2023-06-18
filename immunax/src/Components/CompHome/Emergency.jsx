@@ -32,7 +32,7 @@ templateRows={{ base: 'repeat(1, 1fr)', sm: 'repeat(1, 1fr)', md: 'repeat(3, 1fr
 
     <GridItem colSpan={1} rowSpan={3} >
 
-            <img src={maledoctor} alt="male-doctor" s />
+            <img src={maledoctor} alt="male-doctor"  />
      </GridItem>
 
 <GridItem rowSpan={2} colSpan={1}>
