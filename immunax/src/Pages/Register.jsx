@@ -7,6 +7,7 @@ import {
   } from '@chakra-ui/react'
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import style from './Register.module.css'
+import Footer from './Footer';
 
 
 
@@ -35,7 +36,7 @@ const navigate = useNavigate();
 
 
 const submitt=(inputVal)=>{
-  fetch(`http://localhost:8080/user`)
+  fetch(`https://immunax-api.onrender.com/user`)
   .then((res)=>{
     return  res.json()
   })
@@ -59,7 +60,7 @@ const submitt=(inputVal)=>{
 
 
   function register(inputVal){
-    fetch(`http://localhost:8080/user`,{
+    fetch(`https://immunax-api.onrender.com/user`,{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
@@ -133,7 +134,7 @@ const submitData=(e)=>{
     </Box>
 
    </Container>
-  
+  <Footer/>
    </>
 
 

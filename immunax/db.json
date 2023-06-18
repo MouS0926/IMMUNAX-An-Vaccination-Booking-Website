@@ -30,7 +30,7 @@
   "booking": [
     {
       "id": 1,
-      "name": "ani sen",
+      "name": "Ani Sen",
       "age": 23,
       "gender": "Female",
       "useremail": "nhj@mail.com",
@@ -40,8 +40,8 @@
       "status": false
     },
     {
-      "name": "MOUMITA SARKAR",
-      "age": "23",
+      "name": "Priti Dey",
+      "age": "45",
       "date": "2023-06-23",
       "gender": "Female",
       "location": "Kolkata",
@@ -49,17 +49,6 @@
       "status": false,
       "useremail": "moumita@mail.com",
       "id": 2
-    },
-    {
-      "id": 4,
-      "name": "Anindita",
-      "age": "15",
-      "gender": "",
-      "useremail": "moumita@mail.com",
-      "location": "Kolkata",
-      "date": "2023-06-23",
-      "vaccine_type": "Nuvaxovid",
-      "status": true
     }
   ]
 }

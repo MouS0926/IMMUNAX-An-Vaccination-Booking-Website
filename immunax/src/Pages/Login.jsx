@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react'
 import { AuthContext } from '../Context/Authcontext'
 import { Navigate } from 'react-router-dom'
 import style from './Register.module.css'
+import Footer from './Footer'
 
 
 export default function Login() {
@@ -63,7 +64,7 @@ if(authState.isAuth){
          </form>
          </Box>
         </Container>
-
+<Footer/>
     </div>
   )
 }
