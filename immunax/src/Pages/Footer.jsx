@@ -2,14 +2,14 @@ import { Box, Container,Grid, GridItem, Heading, Stack, Text } from '@chakra-ui/
 
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from "../../logo/immunax-logo-transparent.png"
+import logo from "../logo/immunax-logo-transparent.png"
 
 
 export default function Footer() {
   return (
     <div>
     <Container maxW="100%" p="8"  bg='#f1f5ff'>
-        <Grid templateColumns='repeat(6, 1fr)' gap={6}>
+        <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(1, 1fr)', md: 'repeat(6, 1fr)' }} gap={6}>
 
             <GridItem w='100%' colSpan={3}>
                 <Stack spacing={{ base: '6', md: '8' }} align="start">

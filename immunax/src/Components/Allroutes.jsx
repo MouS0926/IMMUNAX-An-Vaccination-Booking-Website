@@ -5,6 +5,12 @@ import Database from '../Pages/Database'
 import About from '../Pages/About'
 import Register from '../Pages/Register'
 import Login from '../Pages/Login'
+import Booking from '../Pages/Booking'
+import PrivateRoute from './Privateroutes'
+import Booked from '../Pages/Booked'
+import Adminlogin from '../Pages/Adminlogin'
+import Adminalldata from '../Pages/Adminalldata'
+import AdminPrivateRoute from './AdminPrivateRoute'
 
 export default function Allroutes() {
   return (
@@ -15,8 +21,29 @@ export default function Allroutes() {
                 <Route path='/about' element={<About/>} />
                 <Route path='/register' element={<Register/>} />
                 <Route path='/login'  element={<Login/>} />
-           </Routes>
+                <Route path='/booking'  element={
+                <PrivateRoute>
+                  <Booking/>
+              </PrivateRoute>
+                
+                } />
 
+                <Route path='/booked'  element={
+                <PrivateRoute>
+                  <Booked/>
+              </PrivateRoute>
+                
+                } />
+
+              <Route path='/adminlogin'  element={<Adminlogin/>} />
+              <Route path='/userdata'  element={
+              <AdminPrivateRoute>
+                 <Adminalldata/>
+              </AdminPrivateRoute>
+              
+              } />
+           </Routes>
+        
     </div>
   )
 }

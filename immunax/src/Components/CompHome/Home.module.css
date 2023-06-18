@@ -8,4 +8,26 @@
     position: absolute;
     margin-top: -100px;
     margin-left: 110px;
+    width:40%;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px){
+    .logosection{
+        margin-top:100px
+    }
+    .bookform{
+       width: 100%;
+       margin-top: 0;
+       margin-left: 0;
+       
+       font-size: 20px;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 576px){
+    .logosection{
+        margin-top:100px
+    }
 }

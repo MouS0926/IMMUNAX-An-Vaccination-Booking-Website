@@ -1,0 +1,70 @@
+.bookingdiv{
+        width: 60%;
+        margin: auto;
+       margin-top: 150px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: row;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.imageDiv{ 
+    width:40%;
+   background-color: #4461d5
+}
+.imageDiv img{ 
+    margin: auto;
+   position: relative;
+    top: 50%;
+}
+
+.formDiv{
+    width: 60%;
+    padding: 10px 20px 30px 20px;
+    background-color: #f7f9ff;
+}
+/*==================== booked ==========================*/
+.bookedDiv{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+}
+@media screen and (min-device-width:320px) and (max-device-width: 480px) { 
+    .bookingdiv{
+       flex-direction: column;
+       margin-top: 100px;
+    }
+
+    .imageDiv{ 
+        width:100%;
+     
+        padding: 16px 0;
+    }
+    
+    .formDiv{
+        width: 100%;
+    }
+    .bookingdiv{
+        width: 90%;
+        }
+}
+
+@media screen and (min-device-width:481px) and (max-device-width: 576px) { 
+    .bookingdiv{
+        flex-direction: column;
+        margin-top: 100px;
+     }
+
+     .imageDiv{ 
+        width:100%;
+        padding: 16px 0;
+    }
+    
+    .formDiv{
+        width: 100%;
+    }
+
+    .bookingdiv{
+        width: 90%;
+        }
+}

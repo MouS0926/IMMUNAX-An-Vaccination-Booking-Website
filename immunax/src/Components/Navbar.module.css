@@ -14,18 +14,43 @@
     width: 50%;
     display: flex;
     justify-content: space-around; 
+    height: auto;
 }
 .logo{
     width: 200px;
 }
-
+.mobileNav{
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5px;
+    position: fixed;
+    z-index: 9999;
+    background-color: #fff;
+}
+.mobilelist{
+    margin-top: 60px;
+}
+.mobilelogo{
+    width:200px;
+}
 
 @media screen and (min-device-width: 320px) and (max-device-width: 480px) { 
     /* STYLES HERE */
     .navbar{
         display: none;
     }
+    
 }
+@media screen and (min-device-width: 481px) and (max-device-width: 1500px) { 
+    /* STYLES HERE */
+    .mobilelogo{
+        display: none;
+    }
+    .mobileNav{
+      display: none;
+      }
+}
+
 
 /* hero-section */
 

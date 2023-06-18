@@ -6,7 +6,7 @@ export const AuthContext=createContext()
 export default function AuthcontextProvider({ children }) {
   
     const [auth, setAuth] = useState({
-        isAuth: false ,username: null
+        isAuth: false ,username: null,useremail:null
       });
 
       const handlelogin=(email,password)=>{
@@ -22,7 +22,7 @@ export default function AuthcontextProvider({ children }) {
          
           
            if(userFind){
-            setAuth({...auth, isAuth:true,username:userFind.name})
+            setAuth({...auth, isAuth:true,username:userFind.name,useremail:userFind.email})
             alert("You are logged in successfully")
            }
            
