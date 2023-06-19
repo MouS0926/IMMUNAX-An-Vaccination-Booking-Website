@@ -56,7 +56,11 @@ Install dependencies
   npm install react-icons --save
 
 ```
+Start the Website
 
+```bash
+     npm start
+```
 Start the server
 
 ```bash
