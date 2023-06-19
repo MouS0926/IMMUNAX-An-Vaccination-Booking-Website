@@ -65,5 +65,6 @@ Start the server
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+- Landing Page
+<img src="https://github.com/MouS0926/nondescript-question-6337/blob/master/Screenshots/Home.jpeg"  width="600" >
 
