@@ -1,7 +1,7 @@
 import { Box, Button, Container, Divider, FormControl, FormHelperText, FormLabel, Heading, Input } from '@chakra-ui/react'
 import React, { useContext, useState } from 'react'
 import { AuthContext } from '../Context/Authcontext'
-import { Navigate } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import style from './Register.module.css'
 import Footer from './Footer'
 
@@ -62,6 +62,10 @@ if(authState.isAuth){
           <br/><br/>
           <Divider orientation='horizontal' />
          </form>
+         <br/>
+          <Divider orientation='horizontal' />
+        Already Signed up? <Link to="/login">Login</Link>
+
          </Box>
         </Container>
 <Footer/>

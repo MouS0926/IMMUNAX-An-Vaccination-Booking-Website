@@ -128,7 +128,7 @@ const submitData=(e)=>{
           </Button>
           <br/><br/>
           <Divider orientation='horizontal' />
-        Already Signed up? <Link to="/login">Login</Link>
+        Already Registered? <Link to="/login">Login</Link>
    </form>
 
     </Box>

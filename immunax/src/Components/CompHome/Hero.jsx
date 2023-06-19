@@ -58,7 +58,7 @@ export default function Hero() {
                             Schedule Your Vaccination Day
                         </p>
                         
-                      <Button bg="#2b4bc9" color="#fff">
+                      <Button bg="#2b4bc9" color="#fff"  _hover={{bg: 'blue.500'}}>
                             <Link to="/booking">
                             Book
                             </Link>

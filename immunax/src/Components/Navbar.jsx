@@ -22,7 +22,11 @@ export default function Navbar() {
 <Container maxW="100%" className={style.navbar} >
    
         <Box w="50%">
-               <img src={logo} alt="" className={style.logo}/>
+
+          <Link to='/'>
+              <img src={logo} alt="" className={style.logo}/>
+          </Link>
+             
         </Box>
          
           <Box className={style.menubar} >
@@ -65,7 +69,9 @@ export default function Navbar() {
 
 <Container maxW="100%" className={style.mobileNav}>
 <HStack  bg='white'>
-<img src={logo} alt="" className={style.mobilelogo}/>
+    <Link to='/'>
+              <img src={logo} alt="" className={style.logo}/>
+          </Link>
 <Box 
     pos="absolute" 
     zIndex={50} 

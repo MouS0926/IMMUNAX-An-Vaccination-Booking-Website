@@ -60,7 +60,7 @@ export default function Whyshould() {
                         <Center w='50px' h='50px' bg='#f1f5ff'  color='#2d4dcb' fontSize='25px'>
                            <BsShieldFillCheck  />
                         </Center>
-                      <Heading size='md'color="#1f3e72">Minimize the spread of Virus</Heading>
+                      <Heading size='md'color="#1f3e72">Forming Antibodies</Heading>
                       <Text color="#888">
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel neque rem sed eius 
                      accusantium. 
@@ -80,7 +80,7 @@ export default function Whyshould() {
                         <Center w='50px' h='50px' bg='#f1f5ff' color='#2d4dcb' fontSize='25px'>
                            <FaUsers  />
                         </Center>
-                      <Heading size='md'color="#1f3e72">Minimize the spread of Virus</Heading>
+                      <Heading size='md'color="#1f3e72">Protecting People Nearby</Heading>
                       <Text color="#888">
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel neque rem sed eius 
                      accusantium. 
@@ -101,7 +101,7 @@ export default function Whyshould() {
                         <Center w='50px' h='50px' bg='#f1f5ff' color='#2d4dcb' fontSize='25px'>
                            <HiPresentationChartLine />
                         </Center>
-                      <Heading size='md'color="#1f3e72">Minimize the spread of Virus</Heading>
+                      <Heading size='md'color="#1f3e72">Creating group immunity</Heading>
                       <Text color="#888">
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel neque rem sed eius 
                      accusantium. 
