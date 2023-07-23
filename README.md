@@ -12,7 +12,7 @@ IMMUNAX is a website for Vaccination rgistration.This website consist of basic f
 
 ## Tech Stack
 
- React, HTML, Chakra UI,JS
+
 
 <div>
   <img src="https://img.shields.io/badge/React-text?style=for-the-badge&logo=React&color=204456" />
