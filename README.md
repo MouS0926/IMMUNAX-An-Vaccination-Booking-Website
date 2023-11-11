@@ -35,6 +35,11 @@ Admin Features :
 - Admin Vew all booking details
 - Admin can change booking status
 
+API: https://immunax-api.onrender.com/,
+
+## Admin Credential :
+Email: admin@mail.com,
+Password: admin
 
 ## Run Locally
 
